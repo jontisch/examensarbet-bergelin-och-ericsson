@@ -1,6 +1,4 @@
-# examensarbete-bergelin-och-ericsson
-
-Dataöverföring med Bluetooth 5 - En jämförelse mellan Classic och Low Energy vad beträffar prestanda
+# Dataöverföring med Bluetooth 5 - En jämförelse mellan Classic och Low Energy vad beträffar prestanda
 
 Utförd på Jönköpings Tekniska Högskola av John Bergelin och Felix Ericsson.
 
