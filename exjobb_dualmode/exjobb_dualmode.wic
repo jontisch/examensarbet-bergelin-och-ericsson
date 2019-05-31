@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BLE_Smart_Designer>
+    <Chip>20719-B1</Chip>
+    <Designer>WICED 20719-B1</Designer>
+    <DeviceSettings>
+        <Name>exjobb_dualmode</Name>
+        <Appearance>Unknown</Appearance>
+        <BluetoothMode>Dual Mode</BluetoothMode>
+        <Button>false</Button>
+        <UART>false</UART>
+        <Timer1Sec>false</Timer1Sec>
+        <LED>false</LED>
+        <SPI>false</SPI>
+        <Buzzer>false</Buzzer>
+        <Battery>false</Battery>
+        <GattConfig>
+            <GattDatabase>Enabled</GattDatabase>
+        </GattConfig>
+        <ClassOfDevice>
+            <ServiceClass>
+                <LimitedDiscoverableMode>false</LimitedDiscoverableMode>
+                <Positioning>false</Positioning>
+                <Networking>false</Networking>
+                <Rendering>false</Rendering>
+                <Capturing>false</Capturing>
+                <ObjectTransfer>false</ObjectTransfer>
+                <Audio>false</Audio>
+                <Telephony>false</Telephony>
+                <Information>false</Information>
+            </ServiceClass>
+            <MajorClass>Miscellaneous</MajorClass>
+        </ClassOfDevice>
+    </DeviceSettings>
+    <SdpService predefined="true">
+        <Name>Serial Port</Name>
+        <Description>SDP Record for Serial Port</Description>
+        <Parameter id="CLASS_ID">UUID_SERVCLASS_SERIAL_PORT</Parameter>
+        <Parameter id="RFCOMM_PROTOCOL_DESC_LIST">1</Parameter>
+        <Parameter id="SERVICE_NAME">BR/EDR Serial Port</Parameter>
+        <BrowseList>false</BrowseList>
+    </SdpService>
+    <Service predefined="true" primary="true">
+        <Name>Generic Attribute</Name>
+        <Uuid>1801</Uuid>
+        <Description>Generic Attribute</Description>
+    </Service>
+    <Service predefined="true" primary="true">
+        <Name>Generic Access</Name>
+        <Uuid>1800</Uuid>
+        <Description>The generic_access service contains generic information about the device. All available Characteristics are readonly.</Description>
+        <Characteristic mandatory="true" predefined="true">
+            <Name>Device Name</Name>
+            <Uuid>2A00</Uuid>
+            <Description/>
+            <DataType>org.bluetooth.characteristic.gap.device_name</DataType>
+            <Size>15</Size>
+            <InitialValue>exjobb_dualmode</InitialValue>
+            <Properties>
+                <Read type="Mandatory">true</Read>
+                <Write type="Optional">false</Write>
+                <WriteWithoutResponse type="Excluded">false</WriteWithoutResponse>
+                <SignedWrite type="Excluded">false</SignedWrite>
+                <ReliableWrite type="Excluded">false</ReliableWrite>
+                <Notify type="Excluded">false</Notify>
+                <Indicate type="Excluded">false</Indicate>
+                <WritableAuxiliaries type="Excluded">false</WritableAuxiliaries>
+                <Broadcast type="Excluded">false</Broadcast>
+            </Properties>
+            <Permissions>
+                <VariableLength>false</VariableLength>
+                <Read>true</Read>
+                <Write>false</Write>
+                <WriteWithoutResponse>false</WriteWithoutResponse>
+                <AuthenticatedRead>false</AuthenticatedRead>
+                <ReliableWrite>false</ReliableWrite>
+                <AuthenticatedWrite>false</AuthenticatedWrite>
+            </Permissions>
+        </Characteristic>
+        <Characteristic mandatory="true" predefined="true">
+            <Name>Appearance</Name>
+            <Uuid>2A01</Uuid>
+            <Description>The external appearance of this device. The values are composed of a category (10-bits) and sub-categories (6-bits).</Description>
+            <DataType>org.bluetooth.characteristic.gap.appearance</DataType>
+            <Size>2</Size>
+            <InitialValue>00 00</InitialValue>
+            <Properties>
+                <Read type="Mandatory">true</Read>
+                <Write type="Excluded">false</Write>
+                <WriteWithoutResponse type="Excluded">false</WriteWithoutResponse>
+                <SignedWrite type="Excluded">false</SignedWrite>
+                <ReliableWrite type="Excluded">false</ReliableWrite>
+                <Notify type="Excluded">false</Notify>
+                <Indicate type="Excluded">false</Indicate>
+                <WritableAuxiliaries type="Excluded">false</WritableAuxiliaries>
+                <Broadcast type="Excluded">false</Broadcast>
+            </Properties>
+            <Permissions>
+                <VariableLength>false</VariableLength>
+                <Read>true</Read>
+                <Write>false</Write>
+                <WriteWithoutResponse>false</WriteWithoutResponse>
+                <AuthenticatedRead>false</AuthenticatedRead>
+                <ReliableWrite>false</ReliableWrite>
+                <AuthenticatedWrite>false</AuthenticatedWrite>
+            </Permissions>
+        </Characteristic>
+    </Service>
+    <Service predefined="false" primary="true">
+        <Name>Custom Serial GATT</Name>
+        <Uuid>41 69 74 56 97 06 43 7b 86 c6 c6 f1 5c 6f 3f 07</Uuid>
+        <Description>Custom Serial GATT: exjobb_dualmode</Description>
+        <Characteristic mandatory="false" predefined="false">
+            <Name>RX</Name>
+            <Uuid>32 b3 5e 45 76 43 4a 72 91 2c ff 8c cf d0 24 ed</Uuid>
+            <Description>Vendor Specific Characteristic: exjobb_dualmode</Description>
+            <DataType/>
+            <Size>241</Size>
+            <InitialValue/>
+            <Properties>
+                <Read>true</Read>
+                <Notify>true</Notify>
+                <Indicate>false</Indicate>
+                <Write>false</Write>
+                <WriteWithoutResponse>false</WriteWithoutResponse>
+                <SignedWrite>false</SignedWrite>
+                <ReliableWrite>false</ReliableWrite>
+                <WritableAuxiliaries>false</WritableAuxiliaries>
+                <Broadcast>false</Broadcast>
+            </Properties>
+            <Permissions>
+                <VariableLength>false</VariableLength>
+                <Read>true</Read>
+                <Write>false</Write>
+                <WriteWithoutResponse>false</WriteWithoutResponse>
+                <AuthenticatedRead>false</AuthenticatedRead>
+                <ReliableWrite>false</ReliableWrite>
+                <AuthenticatedWrite>false</AuthenticatedWrite>
+            </Permissions>
+            <UserDescription>
+                <Value>RX characteristic</Value>
+                <MaximumLength>512</MaximumLength>
+                <Permissions>
+                    <VariableLength>false</VariableLength>
+                    <Read>true</Read>
+                    <Write>false</Write>
+                    <AuthenticatedRead>false</AuthenticatedRead>
+                    <ReliableWrite>false</ReliableWrite>
+                    <AuthenticatedWrite>false</AuthenticatedWrite>
+                </Permissions>
+            </UserDescription>
+            <ClientConfiguration>
+                <Notification>false</Notification>
+                <Indication>false</Indication>
+            </ClientConfiguration>
+        </Characteristic>
+        <Characteristic mandatory="false" predefined="false">
+            <Name>TX</Name>
+            <Uuid>86 b2 84 b6 5c 9e 49 81 bf 63 ab 87 c2 1d af af</Uuid>
+            <Description>TX: exjobb_dualmode</Description>
+            <DataType/>
+            <Size>241</Size>
+            <InitialValue/>
+            <Properties>
+                <Read>false</Read>
+                <Notify>false</Notify>
+                <Indicate>false</Indicate>
+                <Write>true</Write>
+            </Properties>
+            <Permissions>
+                <VariableLength>false</VariableLength>
+                <Read>false</Read>
+                <Write>true</Write>
+                <WriteWithoutResponse>false</WriteWithoutResponse>
+                <AuthenticatedRead>false</AuthenticatedRead>
+                <ReliableWrite>false</ReliableWrite>
+                <AuthenticatedWrite>false</AuthenticatedWrite>
+            </Permissions>
+            <UserDescription>
+                <Value>TX Characteristic</Value>
+                <MaximumLength>512</MaximumLength>
+                <Permissions>
+                    <VariableLength>false</VariableLength>
+                    <Read>true</Read>
+                    <Write>false</Write>
+                    <AuthenticatedRead>false</AuthenticatedRead>
+                    <ReliableWrite>false</ReliableWrite>
+                    <AuthenticatedWrite>false</AuthenticatedWrite>
+                </Permissions>
+            </UserDescription>
+        </Characteristic>
+    </Service>
+</BLE_Smart_Designer>
